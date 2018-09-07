@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Item1</title>
+<meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script language="javascript">
+window.onload=function(){
+var inputs = document.getElementsByClassName('sum'),
+    total  = document.getElementById('payment-total');
+
+ for (var i=0; i < inputs.length; i++) {
+    inputs[i].onchange = function() {
+        var add = this.value * (this.checked ? 1 : -1);
+        total.innerHTML = parseFloat(total.innerHTML) + add
+    }
+  }
+}</script>
+
+<form name="MyForm">
+<input type="radio" Name="Checkbox" class="sum" Value="8388608">CSC		
+<input type="radio" Name="Checkbox" class="sum" Value="4194304">CYEN		
+<input type="radio" Name="Checkbox" class="sum" Value="2097152">CIS		 
+<input type="radio" Name="Checkbox" class="sum" Value="1048576">Graduate		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="524288">130 Series	<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="262144">CSC 220		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="131072">CSC 222		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="65536">CSC 265		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="32768">CSC 310		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="16384">CSC 325		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="8192">CSC 330		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="4096">CSC 345		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="2048">CSC 364		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="1024">CSC 403		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="512">CSC 404		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="256">CSC 430		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="128">CSC 442		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="64">CSC 443		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="32">CSC 450		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="16">CSC 452		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="8">CSC 470		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="4">CSC 475		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="2">CSC 493		<br /> 
+<input type="checkbox" Name="Checkbox" class="sum" Value="1">CSC 498		<br /> 
+</form>
+<br />
+<span id="payment-total">0</span>
+</body>
+</html>
+
